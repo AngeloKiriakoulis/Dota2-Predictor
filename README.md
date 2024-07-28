@@ -86,7 +86,7 @@ We put our model up against two classic classifiers, to benchmark our model:
 * [Logistic Regressor](https://en.wikipedia.org/wiki/Logistic_regression), Validation Accuracy:*~59,6%* Test Accuracy:*~59,6%*
 * [Random Forest Classifier](https://en.wikipedia.org/wiki/Random_forest),Validation Accuracy:*~57,6%* Test Accuracy:*~57,9%* 
 
-Our model obtained a Valuation Accuracy of **59.61%** and sometimes even higher and a Test Accuracy of **59.1%**.
+Our model obtained a Valuation Accuracy of **59.61%** and sometimes even higher and a Test Accuracy of around **59.1%**.
 
 While our model lacks preprocessing or advanced techniques, it provides an improvement over some of the benchmark models. Keep in mind that further enhancements (such as feature engineering, hyperparameter tuning, or more complex architectures) could potentially yield even better results.
 
