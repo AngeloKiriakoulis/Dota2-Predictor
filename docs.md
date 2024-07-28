@@ -23,7 +23,7 @@ During model training, following the simple preprocessing, the accuracy achieved
 1. [**MinMax Scaling**](https://medium.com/@poojaviveksingh/all-about-min-max-scaling-c7da4e0044c5) \
 A normalization technique used to scale the features of your data to a fixed range, typically [0, 1] or [-1, 1]. \
 It works by simply applying the scaling formula to each value in the feature:
-\[ X' = \frac{X - X_{\text{min}}}{X_{\text{max}} - X_{\text{min}}} \]
+`X' = (X - X_min) / (X_max - X_min)`
 
 - $ X' $ is the scaled value.
 - $ X $ is the original value.
