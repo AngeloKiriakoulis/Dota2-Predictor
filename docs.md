@@ -23,12 +23,13 @@ During model training, following the simple preprocessing, the accuracy achieved
 1. [**MinMax Scaling**](https://medium.com/@poojaviveksingh/all-about-min-max-scaling-c7da4e0044c5) \
 A normalization technique used to scale the features of your data to a fixed range, typically [0, 1] or [-1, 1]. \
 It works by simply applying the scaling formula to each value in the feature:
+
 $$X' = \frac{X - X_{\text{min}}}{X_{\text{max}} - X_{\text{min}}}$$
 
-- $ X' $ is the scaled value.
-- $ X $ is the original value.
-- $ X_{\text{min}} $ is the minimum value of the feature.
-- $ X_{\text{max}} $ is the maximum value of the feature.
+- $X'$ is the scaled value.
+- $X$ is the original value.
+- $X_{\text{min}}$ is the minimum value of the feature.
+- $X_{\text{max}}$ is the maximum value of the feature.
 \
 \
 This is really useful here, because the features are numerical, but also because they have different scales and you want to bring them to a common scale, without distorting the differences in the ranges of values.\
@@ -38,12 +39,12 @@ Scaling helps ensure uniformity in gradient descent across all features, leading
 2. [**Synthetic Minority Over-sampling Technique (SMOTE)**](https://machinelearningmastery.com/smote-oversampling-for-imbalanced-classification/)\
 A technique used to address class imbalance in datasets, particularly useful to every classification problem.\
 For each instance in the minority class, SMOTE finds its k-nearest neighbors (we used k=5). It then randomly selects one of these neighbors and *"a synthetic example is created at a randomly selected point between the two examples in feature space"*, using the formula:
-$$ X_{\text{new}} = X_{\text{instance}} + \lambda \times (X_{\text{neighbor}} - X_{\text{instance}}) $$
+$$X_{\text{new}} = X_{\text{instance}} + \lambda \times (X_{\text{neighbor}} - X_{\text{instance}})$$
 
-- $ X_{\text{new}} $ is the synthetic instance.
-- $ X_{\text{instance}} $ is the original minority class instance.
-- $ X_{\text{neighbor}} $ is the selected neighbor.
-- $ \lambda $ is a random number between 0 and 1. \
+- $X_{\text{new}}$ is the synthetic instance.
+- $X_{\text{instance}}$ is the original minority class instance.
+- $X_{\text{neighbor}}$ is the selected neighbor.
+- $\lambda$ is a random number between 0 and 1. \
 \
 This process augmented the original dataset by approximately **4,000 instances**, increasing the overall classification performance. After preprocessing and final augmentation, we achieved a **73/17/10 split** for training, validation, and testing, respectively.
 
